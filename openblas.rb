@@ -9,7 +9,8 @@ class Openblas < Formula
 
   def install
     ENV.fortran
-    system "make", "NO_LAPACK=1"
-    system "make", "PREFIX=#{prefix}", "install"
+    # Must call in two steps
+    system "make", "NOLAPACK=1"
+    system "make", "NOLAPACK=1", "PREFIX=#{prefix}", "install"
   end
 end
