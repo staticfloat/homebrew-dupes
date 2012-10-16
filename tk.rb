@@ -8,6 +8,7 @@ class Tk < Formula
 
   # must use a Homebrew-built Tcl since versions must match
   depends_on 'tcl'
+  depends_on :x11
 
   option 'enable-threads', 'Build with multithreading support'
   option 'enable-aqua', 'Build with Aqua support'
